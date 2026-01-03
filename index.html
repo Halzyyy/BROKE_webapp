@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>$BROKE</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin:0; padding:0; background:#0f0f0f; color:#fff; font-family:Arial; text-align:center; }
+    .container { padding:24px; }
+    .logo { font-size:48px; margin-top:20px; }
+    h1 { margin:10px 0; font-size:32px; }
+    p { opacity:0.8; }
+    .card { background:#151515; border-radius:16px; padding:16px; margin:20px 0; }
+    button { width:100%; padding:16px; margin:10px 0; font-size:16px; border-radius:14px; border:none; cursor:pointer; background:#2f80ff; color:#fff; }
+    button.secondary { background:#2b2b2b; }
+    .footer { margin-top:30px; font-size:14px; opacity:0.6; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">💸</div>
+  <h1>$BROKE</h1>
+  <p>The most broke meme coin on TON blockchain</p>
+  <div class="card">
+    <p>💰 Supply: 1,000,000,000</p>
+    <p>🔥 Tax: 0%</p>
+    <p>💸 Forever broke. Forever meme.</p>
+  </div>
+  <button onclick="buy()">BUY $BROKE</button>
+  <button class="secondary" onclick="chart()">CHART</button>
+  <button class="secondary" onclick="community()">COMMUNITY</button>
+  <div class="footer">$BROKE • Telegram Web App</div>
+</div>
+<script>
+  const tg = window.Telegram.WebApp;
+  tg.expand();
+  const TOKEN_ADDRESS = "EQC9HHYU_3mFKvCrusIPBvQNseq8dkW-3dLDKKyWUb_01My5";
+  function buy() { window.open(`https://tonswap.com/#/swap?outputCurrency=${TOKEN_ADDRESS}`, "_blank"); }
+  function chart() { window.open(`https://tonscan.org/address/${TOKEN_ADDRESS}`, "_blank"); }
+  function community() { window.open("https://t.me/BROKE_memecoin", "_blank"); }
+</script>
+</body>
+</html>
